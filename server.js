@@ -1,6 +1,7 @@
 var express = require('express');
 var app = express();
 var path = require('path');
+require('dotenv').config();
 var bodyParser = require('body-parser');
 var MongoClient = require('mongodb').MongoClient
 var db;
@@ -50,7 +51,7 @@ for (let city of ArrayCities){
         /*********************************************************************
         ************ Etablissement de la connection a mongodb **************
         *********************************************************************/
-          MongoClient.connect('mongodb://localhost:27017', function (err, database) {
+          MongoClient.connect(process.env.MONGODB_HOST, function (err, database) {
             if (err) 
               throw err
             else
