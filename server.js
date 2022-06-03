@@ -6,10 +6,10 @@ var bodyParser = require('body-parser');
 var MongoClient = require('mongodb').MongoClient
 var db;
 const https = require('https');
-const WeatherKey = require('./jeys');
+//const WeatherKey = require('./jeys');
 const myjsonCities = require('./cities.json'); //on récupère les données des villes de la cote Atlantique dans le fichier cities.json
 
-let weatherKey = new WeatherKey(); // récupération des clés  pour se connecter aux API
+//let weatherKey = new WeatherKey(); // récupération des clés  pour se connecter aux API
 
 
 
@@ -62,7 +62,7 @@ for (let city of ArrayCities){
               if (err)
               console.log("error");
               else
-              console.log("success");
+              console.log("success :" +process.env.MONGODB_HOST_OL);
         
              });
             console.log('Connected to MongoDB');
