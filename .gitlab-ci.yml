@@ -7,7 +7,7 @@ deploy:
   stage: deploy
   script: 
     - gem install dpl
-    - dpl --provider=heroku --app=destinycards-back-vallagarde-s --api_key=$HEROKU_STAGING_API_KEY
+    - dpl --provider=heroku --app=projet4-robot --api_key=$HEROKU_STAGING_API_KEY
 
 testintegration:
   image: bash
