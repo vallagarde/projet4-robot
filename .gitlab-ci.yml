@@ -1,0 +1,16 @@
+stages:
+  - deploy
+  - integration
+
+deploy:
+  image: ruby
+  stage: deploy
+  script: 
+    - gem install dpl
+    - dpl --provider=heroku --app=destinycards-back-vallagarde-s --api_key=$HEROKU_STAGING_API_KEY
+
+testintegration:
+  image: bash
+  stage: integration
+  script:
+    - wget $HEROKU_STAGING_APP_URL

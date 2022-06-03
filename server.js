@@ -36,7 +36,7 @@ for (let city of ArrayCities){
 
     console.log("on est rentré dans le for "+ city+" "+ city.lat);
  
-    https.get('https://api.weatherbit.io/v2.0/forecast/daily?lat='+city.lat+'&lon='+city.long+'&lang=fr&days=2&key='+weatherKey.key , (resp) =>{ //requete prenant en compte les prévisions pour les deux jours suivant dans les 20 villes cotières
+    https.get('https://api.weatherbit.io/v2.0/forecast/daily?lat='+city.lat+'&lon='+city.long+'&lang=fr&days=2&key='+process.env.API_KEY , (resp) =>{ //requete prenant en compte les prévisions pour les deux jours suivant dans les 20 villes cotières
     let data='';
   
 
@@ -58,7 +58,7 @@ for (let city of ArrayCities){
             {
             var db = database.db('meteodb');
 
-            db.collection('meteo').insertOne(dataObj, function (err, result) {
+            db.collection('meteos').insertOne(dataObj, function (err, result) {
               if (err)
               console.log("error");
               else
