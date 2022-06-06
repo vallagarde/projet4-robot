@@ -13,6 +13,23 @@ const myjsonCities = require('./cities.json'); //on récupère les données des 
 
 
 
+/*************************************************************************
+ * Création de la promise qui permet d'attendre entre deux appels à l'API *
+**************************************************************************/
+
+function sleep(ms) {
+  return new Promise(resolve => setTimeout(resolve, ms));
+}
+
+async function wait1() {
+  
+      console.log(`Pause 1 seconde...`);
+      await sleep(1000);
+  
+  console.log('Done');
+}
+
+
 
 
 
@@ -62,7 +79,7 @@ for (let city of ArrayCities){
               if (err)
               console.log("error");
               else
-              console.log("success :" +process.env.MONGODB_HOST_OL);
+              console.log("success :");
         
              });
             console.log('Connected to MongoDB');
@@ -76,6 +93,9 @@ for (let city of ArrayCities){
     
     }).on("error", (err) => {
       console.log("Error: " + err.message);
+
+      /*On attend avant la prochaine requete à l'API pour laisser le temps a l'app de ranger toutes les infos*/ 
+      wait1();
 
 })
 
