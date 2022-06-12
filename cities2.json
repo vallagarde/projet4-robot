@@ -1,0 +1,42 @@
+[{
+    "name" :"Port_Navalo" ,
+    "lat" : 47.33,
+    "long" : -2.55 
+
+},
+{
+    "name" : "Ile_de_Groix",
+    "lat" : 47.39,
+    "long" : -3.27
+
+},
+{
+    "name" : "Concarneau",
+    "lat" : 47.52,
+    "long" : -3.54
+
+},
+{
+    "name" : "Brest",
+    "lat" : 48.23,
+    "long" : -4.30 
+
+},
+{
+    "name" : "Roscoff",
+    "lat" : 48.43,
+    "long" : -3.58
+
+},
+{
+    "name" : "Paimpol",
+    "lat" :48.48 ,
+    "long" :-2.57 
+
+},
+{
+    "name" : "Saint_Malo",
+    "lat" : 48.38 ,
+    "long" : -2.00 
+
+}]

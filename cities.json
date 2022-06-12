@@ -14,5 +14,38 @@
         "lat" :43.310,
         "long" : -1.310
 
+    },
+
+      {
+       "name" : "Arcachon",
+        "lat" : 44.40 ,
+        "long" : -1.10
+
+    },
+    {
+        "name" : "Pointe_de_grave",
+        "lat" : 45.34,
+        "long" : -1.04 
+
+    },
+    {
+        "name" :"La_Rochelle_Pallice",
+        "lat" : 46.10,
+        "long" :-1.13 
+
+    },
+    {
+        "name" : "Sables_d_Olonne",
+        "lat" : 46.30,
+        "long" : -1.48 
+
+    },
+    {
+        "name" : "Saint_Nazaire",
+        "lat" : 47.16,
+        "long" :-2.12 
+
     }
+   
+    
 ]
