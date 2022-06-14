@@ -4,7 +4,6 @@ require('dotenv').config();
 var bodyParser = require('body-parser');
 var MongoClient = require('mongodb').MongoClient
 var db;
-const https = require('https');
 //const WeatherKey = require('./jeys');
 const myjsonCities = require('./cities.json'); //on récupère les données des villes de la cote Atlantique dans le fichier cities.json
 const myjsonCities2 = require('./cities2.json');
