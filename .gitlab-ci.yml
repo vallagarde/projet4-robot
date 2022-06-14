@@ -8,9 +8,3 @@ deploy:
   script: 
     - gem install dpl
     - dpl --provider=heroku --app=projet4-robot --api_key=$HEROKU_STAGING_API_KEY
-
-testintegration:
-  image: bash
-  stage: integration
-  script:
-    - wget $HEROKU_STAGING_APP_URL
